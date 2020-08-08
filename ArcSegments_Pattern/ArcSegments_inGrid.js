@@ -37,7 +37,7 @@ function draw()
   {
     for(let xDirection = 0; xDirection < width; xDirection += rad)
     {
-      let randC = random(colors3);
+      let randC = random(colors2);
       noStroke();
       fill(randC.r, randC.g, randC.b);
       rect(xDirection, yDirection, rad, rad);
@@ -59,7 +59,7 @@ function quartArcs(centerX, centerY, start, stop)
   push();
   translate(centerX, centerY);
   
-  let rand = random(colors3);
+  let rand = random(colors2);
   noStroke();
   fill(rand.r, rand.g, rand.b);
   
