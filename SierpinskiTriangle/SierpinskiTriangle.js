@@ -14,11 +14,7 @@ colors = [{r : 0, g : 134, b : 129}, //tealish
 function setup() 
 {
   createCanvas(600, 600);
-  //background(colors[5].r, colors[5].g, colors[5].b); //240 //colors[0] 
   background(240);
-  
-  //sierpinski(300, 50, 50, 550, 550, 550, 3); //op1-3 //op2-3
-  //sierpinski(50, 50, 550, 50, 300, 550, 2); //op1-2 //op2-1
 }
 
 
@@ -28,8 +24,8 @@ function draw()
   //sierpinski(300, 50, 50, 550, 550, 550, 2);
   
   //Version 2 - Glitchy Mix
-  sierpinski(300, 50, 50, 550, 550, 550, 3); //op1-3 //op2-3 //op3-3
-  sierpinski(50, 50, 550, 50, 300, 550, 4); //op1-2 //op2-1 //op3-4
+  sierpinski(300, 50, 50, 550, 550, 550, 3); 
+  sierpinski(50, 50, 550, 50, 300, 550, 4); 
 }
 
 
@@ -42,16 +38,12 @@ function sierpinski(x1, y1, x2, y2, x3, y3, ind)
     let r = floor(random(3));
     stroke(colors[ind].r, colors[ind].g, colors[ind].b, 160); //alpha for version 1=100
     
-    //noStroke();
-    //fill(colors[ind].r, colors[ind].g, colors[ind].b, 160);
-    
     if (r == 0) //Point 1
     {
       let nx = (px + x1) / 2;
       let ny = (py + y1) / 2;
       
       point(nx, ny);
-      //rect(nx, ny, random(10), random(5));
       
       px = nx;
       py = ny;
@@ -63,7 +55,6 @@ function sierpinski(x1, y1, x2, y2, x3, y3, ind)
       let ny = (py + y2) / 2;
       
       point(nx, ny);
-      //rect(nx, ny, random(10), random(5));
       
       px = nx;
       py = ny;
@@ -75,16 +66,9 @@ function sierpinski(x1, y1, x2, y2, x3, y3, ind)
       let ny = (py + y3) / 2;
       
       point(nx, ny);
-      //rect(nx, ny, random(8), random(4));
       
       px = nx;
       py = ny;
     }
   }
-}
-
-
-function keyPressed()
-{
-  saveFrames('out', 'png');
 }
