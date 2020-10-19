@@ -24,9 +24,6 @@ function setup()
     startKochOutward((distFromSide*i) + (distFromSide/2), height - distFromBottom - h, (distFromSide*(i+1)) + (distFromSide/2), height - distFromBottom - h); //level 2
     startKochOutward((distFromSide*i) + (distFromSide/2), height - distFromBottom - h*3, (distFromSide*(i+1)) + (distFromSide/2), height - distFromBottom - h*3); //level 4
   }
-  
-  //capturer.start(); 
-  //draw();
 }
 
 
@@ -70,16 +67,6 @@ function draw()
   {
     l.show();
   }
-  
-  //capturer.capture(document.getElementById('defaultCanvas0'));
-  
-  //if (frameCount > 800) 
-  //{
-  //  console.log('finished');
-  //  capturer.stop();
-  //  capturer.save();
-  //  noLoop();
-  //}
 }
 
 
